@@ -41,12 +41,8 @@ setup_custom_themes_dwm() {
     cd ..
 
     # Install custom mouse theme
-    echo -e "${YELLOW}Downloading and installing custom mouse theme...${NC}"
-    wget -qO- https://github.com/ful1e5/Bibata_Cursor/archive/refs/heads/main.zip -O bibata-cursor.zip
-    unzip -q bibata-cursor.zip
-    cd Bibata_Cursor-main || { echo -e "${RED}Failed to enter mouse theme directory!${NC}"; exit 1; }
-    sudo cp -r Bibata-* /usr/share/icons/
-    cd ..
+    paru -S bibata-cursor-theme-bin # (recommended)
+    #paru -S bibata-cursor-theme
 
     # Install JetBrains Mono font
     echo -e "${YELLOW}Downloading and installing JetBrains Mono font...${NC}"
